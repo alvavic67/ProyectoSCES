@@ -1,41 +1,110 @@
-var createError = require('http-errors');
 var express = require('express');
-var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var bodyParser = require('body-parser');
+var session = require('express-session');
+var mongoCliente = require("mongodb").MongoClient;
+var url  = "mongodb://localhost:27017/alumnosSalle";
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var {
+    PORT = 3000,
+    SESS_LIFETIME = 1000 * 60 * 60,
+    SESS_NAME = 'sid'
+} //= process.env()
+
+var users = [
+    { id:1, name: 'Alvaro Silva Peña', username: 'silva', password: '123' },
+    { id:2, name: 'Esteban Mata Gómez', username: 'mata', password: 'abc' },
+    { id:3, name: 'Noé Oliva González', username: 'noe', password: '456' },
+]
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
+app.use(session({
+    name: SESS_NAME,
+    secret: 'gatitos',
+    resave: false,
+    saveUninitialized: false,
+    //store: 
+    cookie: { 
+        secure: true,
+        maxAge: SESS_LIFETIME,
+        sameSite: true
+    }
+})) 
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+var redirectLogin = (req, res, next) => {
+    if(!req.session.userId) {
+        res.redirect('/login');
+    } else {
+        next();
+    }
+}
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+var redirectHome = (req, res, next) => {
+    if(req.session.userId) {
+        res.redirect('/home');
+    } else {
+        next();
+    }
+}
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use((req, res, next) => {
+    var { userId } = req.session
+    if (userId) {
+        res.locals.user = users.find(
+            user => user.id === userId
+        )
+    }
+    next()
+})
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+app.get('/', (req, res) => {
+    var { userId } = req.session
+    res.send('/home')
+})
 
-module.exports = app;
+app.get('/login', redirectHome, (req, res) => {
+    req.session.userId = 
+    res.send(login.html);
+})
+
+app.get('/home', redirectLogin, (req, res) => {
+    var user = users.find(user => user.id === req.session.userId)
+    console.log(user.name)
+    console.log(user.username)
+    console.log(user.password)
+    res.send(home.html);
+})
+
+app.post('/login', redirectHome, (req, res) => {
+    var { user, password } = req.body
+    if (email && password) {
+        var user = user.find(
+            user => user.username === username && user.password === password
+        )
+    }
+
+    if (user) {
+        req.session.userId = user.id;
+        return res.redirect('/home')
+    }
+    res.redirect('/login')
+})
+
+app.post('/logout', redirectLogin, (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+            return res.redirect('/home')
+        }
+        res.clearCookie(SESS_NAME)
+        res.redirect('/login')
+    })
+})
+
+app.listen(PORT, function() {
+    console.log('El servidor está escuchando por el puerto 3000');
+})
