@@ -23,13 +23,6 @@
         <activity android:name="com.example.qrmata.Activities.ScanActivity" />
         <activity android:name="com.example.qrmata.Activities.LoginActivity" />
         <activity android:name="com.example.qrmata.Activities.LocationActivity" />
-        <activity android:name="com.example.qrmata.MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
