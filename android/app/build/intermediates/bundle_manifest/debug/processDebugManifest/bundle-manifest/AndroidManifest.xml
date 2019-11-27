@@ -20,6 +20,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.qrmata.Activities.ScanActivity" />
+        <activity android:name="com.example.qrmata.Activities.LoginActivity" />
+        <activity android:name="com.example.qrmata.Activities.LocationActivity" />
         <activity android:name="com.example.qrmata.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
