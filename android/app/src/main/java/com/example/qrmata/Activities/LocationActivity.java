@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.qrmata.R;
+
 public class LocationActivity extends AppCompatActivity {
 
     @Override
