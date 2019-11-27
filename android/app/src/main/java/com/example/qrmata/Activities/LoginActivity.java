@@ -22,6 +22,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        initializeComponents();
+        findViewById(R.id.btnLogin).setOnClickListener(this);
     }
 
     public void initializeComponents(){
@@ -43,7 +45,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnLogin:
-                getCredentials();
                 Intent intent = new Intent(getApplicationContext(),ScanActivity.class);
                 startActivity(intent);
                 break;
