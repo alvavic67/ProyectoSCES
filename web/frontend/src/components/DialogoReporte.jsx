@@ -8,6 +8,8 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import axios from "axios";
 
+import jsPDF from "jspdf";
+
 export default function DialogProfessor(props) {
   const [role, setRole] = React.useState("");
   const handleRole = event => {
@@ -22,20 +24,19 @@ export default function DialogProfessor(props) {
       const reports = await data.json();
       console.log(reports.data);
       setUsers(reports.data);
-      // this.setState({ usuarios: users.data });
     });
   }, []);
 
-  const filterReportsByWeek = () => {
-    console.log("Filtra sisisi");
-  };
-
   const downloadPDF = () => {
-    console.log(users);
+    var doc = new jsPDF();
 
-    fetch("http://localhost:3001/api/generatePDF").then(async data => {
-      console.log(data);
+    let contenido = "";
+    doc.text("Reportes", 20, 20);
+    users.forEach(user => {
+      contenido += `Nombre: ${user.name}\nHoras:${user.hours}\nDia:${user.day}\nFecha:${user.date}\n\n`;
     });
+    doc.text(contenido, 15, 30);
+    doc.save("reporte.pdf");
     props.close();
   };
 

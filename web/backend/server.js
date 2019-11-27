@@ -91,9 +91,10 @@ router.get("/getLocations", (req, res) => {
   });
 });
 
-router.get("/generatePDF", (req, res) => {
-  return PDF;
-});
+// router.get("/generatePDF", (req, res) => {
+//   return res.json({success: true, data: docs});
+// });
+
 // // this is our update method
 // // this method overwrites existing data in our database
 // router.post("/updateData", (req, res) => {
