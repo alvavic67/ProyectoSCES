@@ -1,7 +1,7 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    xmlns:dist="http://schemas.android.com/apk/distribution"
-4    package="com.example.mobil"
+4    package="com.example.qrmata"
 5    android:versionCode="1"
 6    android:versionName="1.0" >
 7
@@ -32,7 +32,7 @@
 21-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:13:9-35
 22        android:theme="@style/AppTheme" >
 22-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:14:9-40
-23        <activity android:name="com.example.mobil.MainActivity" >
+23        <activity android:name="com.example.qrmata.MainActivity" >
 23-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:15:9-21:20
 23-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:15:19-47
 24            <intent-filter>
