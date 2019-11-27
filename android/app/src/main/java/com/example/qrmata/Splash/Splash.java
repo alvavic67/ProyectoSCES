@@ -6,6 +6,7 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.qrmata.Activities.LoginActivity;
 import com.example.qrmata.R;
 
 public class Splash extends AppCompatActivity {
