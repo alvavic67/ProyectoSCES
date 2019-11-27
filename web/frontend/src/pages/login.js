@@ -16,6 +16,12 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 
+import {
+  Route,
+  Link as Navigate,
+  BrowserRouter as Router
+} from "react-router-dom";
+
 import axios from "axios";
 
 const useStyles = makeStyles(theme => ({
@@ -40,14 +46,30 @@ const useStyles = makeStyles(theme => ({
 
 const Login = () => {
   const classes = useStyles();
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+  const handleUsername = event => {
+    setUsername(event.target.value);
+  };
+
+  const handlePassword = event => {
+    setPassword(event.target.value);
+  };
 
   const signIn = async () => {
+    console.log(username);
+    console.log(password);
     await fetch("http://localhost:3001/api/getUser", {
-      username: "silva",
-      password: "12323232"
-    })
-      .then(async data => console.log(await data.json()))
-      .then(async res => console.log(await res));
+      username: username,
+      password: password
+    }).then(async data => {
+      const response = await data.json();
+      if (response.success) {
+      } else {
+        console.log("Fail");
+      }
+    });
   };
 
   return (
@@ -69,6 +91,8 @@ const Login = () => {
                   label="Usuario"
                   name="email"
                   autoComplete="email"
+                  value={username}
+                  onChange={handleUsername}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -81,6 +105,8 @@ const Login = () => {
                   type="password"
                   id="password"
                   autoComplete="current-password"
+                  value={password}
+                  onChange={handlePassword}
                 />
               </Grid>
             </Grid>
@@ -93,6 +119,7 @@ const Login = () => {
               onClick={async () => await signIn()}
             >
               Entrar
+              <Navigate to="/home" />
             </Button>
           </form>
         </div>

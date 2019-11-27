@@ -21,8 +21,8 @@ import axios from "axios";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "100%",
-    width: "100%",
+    height: "800px",
+    width: "1280px",
     display: "center",
     justifyContent: "center"
   },
@@ -30,8 +30,8 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     alignItems: "right",
     align: "right",
-    margin: theme.spacing(2, 0, 2),
-    paddingLeft: "150px",
+    margin: theme.spacing(2, 10, 2),
+    paddingLeft: "600px",
     overflow: "auto"
   },
   leftDiv: {
@@ -66,10 +66,10 @@ export default function Main() {
     <div className={classes.root}>
       <Container maxWidth="lg">
         <Grid container>
-          <Grid item lg={6} className={classes.leftDiv}>
+          <Grid item lg={6} sm={6} xs={6} className={classes.leftDiv}>
             <Map className="item-map" />
           </Grid>
-          <Grid item lg={6} className={classes.rightDiv}>
+          <Grid item lg={6} sm={6} xs={6} className={classes.rightDiv}>
             <Button onClick={() => handleClickOpen()}>Generar Reporte</Button>
             <Button>Cerrar Sesion</Button>
             <List title="Usuarios" className="item-lista" usuarios={usuarios} />
