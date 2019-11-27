@@ -8,16 +8,50 @@
     tools:context=".Activities.LocationActivity">
 
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView2"
+        android:layout_width="139dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="204dp"
+        android:src="@drawable/app_logo"
+        app:layout_constraintBottom_toTopOf="@+id/txtUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnEncender"
+        android:layout_width="314dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="152dp"
+        android:text="Encender Ubicacion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnApagar"
         android:layout_width="314dp"
         android:layout_height="57dp"
         android:layout_marginBottom="48dp"
-        android:text="Enviar Ubicacion"
+        android:text="Apagar Ubicacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.143" />
+
+    <TextView
+        android:id="@+id/statuslocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        app:layout_constraintBottom_toTopOf="@+id/btnEncender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

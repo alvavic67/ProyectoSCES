@@ -66,166 +66,167 @@
 36-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:26:9-54
 37        android:supportsRtl="true"
 37-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:27:9-35
-38        android:theme="@style/AppTheme" >
-38-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:28:9-40
-39        <activity android:name="com.example.qrmata.Activities.ScanActivity" />
-39-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:29:9-70
-39-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:29:19-58
-40        <activity android:name="com.example.qrmata.Activities.LoginActivity" />
-40-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:30:9-62
-40-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:30:19-59
-41        <activity android:name="com.example.qrmata.Activities.LocationActivity" />
-41-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:31:9-65
-41-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:31:19-62
-42        <activity
-42-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:32:9-41:20
-43            android:name="com.example.qrmata.Splash.Splash"
-43-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:33:13-42
-44            android:screenOrientation="portrait"
-44-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:34:13-49
-45            android:theme="@style/Theme.AppCompat.NoActionBar" >
-45-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:35:13-63
-46            <intent-filter>
-46-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:36:13-40:29
-47                <action android:name="android.intent.action.MAIN" />
-47-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:37:17-69
-47-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:37:25-66
-48
-49                <category android:name="android.intent.category.LAUNCHER" />
-49-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:39:17-77
-49-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:39:27-74
-50            </intent-filter>
-51        </activity>
-52
-53        <meta-data
-53-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:47:9-50:21
-54            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-54-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:48:13-70
-55            android:value="ocr, face, barcode, label" >
-55-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:49:13-54
-56        </meta-data>
-57
-58        <provider
-59            android:name="androidx.core.content.FileProvider"
-59-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:53:13-62
-60            android:authorities="com.example.qrmata.provider"
-60-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:54:13-60
-61            android:exported="false"
-61-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:55:13-37
-62            android:grantUriPermissions="true" >
-62-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:56:13-47
-63            <meta-data
-63-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:57:13-59:58
-64                android:name="android.support.FILE_PROVIDER_PATHS"
-64-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:58:17-67
-65                android:resource="@xml/provider_paths" />
-65-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:59:17-55
-66        </provider>
-67
-68        <service
-68-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:9:9-15:19
-69            android:name="com.google.firebase.components.ComponentDiscoveryService"
-69-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:10:13-84
-70            android:exported="false" >
-70-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:11:13-37
-71            <meta-data
-71-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:12:13-14:85
-72                android:name="com.google.firebase.components:com.google.firebase.ml.vision.VisionRegistrar"
-72-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:13:17-108
-73                android:value="com.google.firebase.components.ComponentRegistrar" />
-73-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:14:17-82
-74            <meta-data
-74-->[com.google.firebase:firebase-ml-model-interpreter:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/b8ec46258d4099112ef33dc281ebcc2b/firebase-ml-model-interpreter-21.0.0/AndroidManifest.xml:12:13-14:85
-75                android:name="com.google.firebase.components:com.google.firebase.ml.custom.CustomModelRegistrar"
-75-->[com.google.firebase:firebase-ml-model-interpreter:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/b8ec46258d4099112ef33dc281ebcc2b/firebase-ml-model-interpreter-21.0.0/AndroidManifest.xml:13:17-113
-76                android:value="com.google.firebase.components.ComponentRegistrar" />
-76-->[com.google.firebase:firebase-ml-model-interpreter:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/b8ec46258d4099112ef33dc281ebcc2b/firebase-ml-model-interpreter-21.0.0/AndroidManifest.xml:14:17-82
-77            <meta-data
-77-->[com.google.firebase:firebase-ml-natural-language-smart-reply-model:20.0.6] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/afbc374b1cd3472122b8c5ee9a0dc931/firebase-ml-natural-language-smart-reply-model-20.0.6/AndroidManifest.xml:26:13-28:85
-78                android:name="com.google.firebase.components:com.google.android.gms.predictondevice.component.SmartReplyComponentRegistrar"
-78-->[com.google.firebase:firebase-ml-natural-language-smart-reply-model:20.0.6] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/afbc374b1cd3472122b8c5ee9a0dc931/firebase-ml-natural-language-smart-reply-model-20.0.6/AndroidManifest.xml:27:17-140
-79                android:value="com.google.firebase.components.ComponentRegistrar" />
-79-->[com.google.firebase:firebase-ml-natural-language-smart-reply-model:20.0.6] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/afbc374b1cd3472122b8c5ee9a0dc931/firebase-ml-natural-language-smart-reply-model-20.0.6/AndroidManifest.xml:28:17-82
-80            <meta-data
-80-->[com.google.firebase:firebase-ml-natural-language:21.0.3] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/8188a5636bfc19f00d4f92957e625d78/firebase-ml-natural-language-21.0.3/AndroidManifest.xml:12:13-14:85
-81                android:name="com.google.firebase.components:com.google.firebase.ml.naturallanguage.NaturalLanguageRegistrar"
-81-->[com.google.firebase:firebase-ml-natural-language:21.0.3] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/8188a5636bfc19f00d4f92957e625d78/firebase-ml-natural-language-21.0.3/AndroidManifest.xml:13:17-126
-82                android:value="com.google.firebase.components.ComponentRegistrar" />
-82-->[com.google.firebase:firebase-ml-natural-language:21.0.3] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/8188a5636bfc19f00d4f92957e625d78/firebase-ml-natural-language-21.0.3/AndroidManifest.xml:14:17-82
-83            <meta-data
-83-->[com.google.firebase:firebase-ml-natural-language-translate:21.0.2] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/657340322c0024e69fed29f43db310cb/firebase-ml-natural-language-translate-21.0.2/AndroidManifest.xml:12:13-14:85
-84                android:name="com.google.firebase.components:com.google.firebase.ml.naturallanguage.translate.NaturalLanguageTranslateRegistrar"
-84-->[com.google.firebase:firebase-ml-natural-language-translate:21.0.2] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/657340322c0024e69fed29f43db310cb/firebase-ml-natural-language-translate-21.0.2/AndroidManifest.xml:13:17-145
-85                android:value="com.google.firebase.components.ComponentRegistrar" />
-85-->[com.google.firebase:firebase-ml-natural-language-translate:21.0.2] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/657340322c0024e69fed29f43db310cb/firebase-ml-natural-language-translate-21.0.2/AndroidManifest.xml:14:17-82
-86            <meta-data
-86-->[com.google.firebase:firebase-ml-common:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/dc33680b5fda17d4ceb64956c9e0f7fd/firebase-ml-common-21.0.0/AndroidManifest.xml:11:13-13:85
-87                android:name="com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar"
-87-->[com.google.firebase:firebase-ml-common:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/dc33680b5fda17d4ceb64956c9e0f7fd/firebase-ml-common-21.0.0/AndroidManifest.xml:12:17-117
-88                android:value="com.google.firebase.components.ComponentRegistrar" />
-88-->[com.google.firebase:firebase-ml-common:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/dc33680b5fda17d4ceb64956c9e0f7fd/firebase-ml-common-21.0.0/AndroidManifest.xml:13:17-82
-89            <meta-data
-89-->[com.google.firebase:firebase-config:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/52e5dc26c180bce5383c655ff2c8e00b/firebase-config-19.0.0/AndroidManifest.xml:32:13-34:85
-90                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
-90-->[com.google.firebase:firebase-config:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/52e5dc26c180bce5383c655ff2c8e00b/firebase-config-19.0.0/AndroidManifest.xml:33:17-117
-91                android:value="com.google.firebase.components.ComponentRegistrar" />
-91-->[com.google.firebase:firebase-config:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/52e5dc26c180bce5383c655ff2c8e00b/firebase-config-19.0.0/AndroidManifest.xml:34:17-82
-92            <meta-data
-92-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:32:13-34:85
-93                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-93-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:33:17-96
-94                android:value="com.google.firebase.components.ComponentRegistrar" />
-94-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:34:17-82
-95            <meta-data
-95-->[com.google.firebase:firebase-abt:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0cc8fd4cdc91b7486de2739c088001e8/firebase-abt-19.0.0/AndroidManifest.xml:13:13-15:85
-96                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
-96-->[com.google.firebase:firebase-abt:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0cc8fd4cdc91b7486de2739c088001e8/firebase-abt-19.0.0/AndroidManifest.xml:14:17-109
-97                android:value="com.google.firebase.components.ComponentRegistrar" />
-97-->[com.google.firebase:firebase-abt:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0cc8fd4cdc91b7486de2739c088001e8/firebase-abt-19.0.0/AndroidManifest.xml:15:17-82
-98        </service>
-99
-100        <receiver
-100-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:37:9-44:20
-101            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-101-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:38:13-78
-102            android:exported="true"
-102-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:39:13-36
-103            android:permission="com.google.android.c2dm.permission.SEND" >
-103-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:40:13-73
-104            <intent-filter>
-104-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:41:13-43:29
-105                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-105-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:42:17-81
-105-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:42:25-78
-106            </intent-filter>
-107        </receiver>
-108
-109        <activity
-109-->[com.google.android.gms:play-services-base:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/4fd23f1c0a576ef4883220502e5e1d72/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-110            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-110-->[com.google.android.gms:play-services-base:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/4fd23f1c0a576ef4883220502e5e1d72/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-111            android:exported="false"
-111-->[com.google.android.gms:play-services-base:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/4fd23f1c0a576ef4883220502e5e1d72/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-112            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-112-->[com.google.android.gms:play-services-base:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/4fd23f1c0a576ef4883220502e5e1d72/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-113
-114        <provider
-114-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:12:9-16:39
-115            android:name="com.google.firebase.provider.FirebaseInitProvider"
-115-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:13:13-77
-116            android:authorities="com.example.qrmata.firebaseinitprovider"
-116-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:14:13-72
-117            android:exported="false"
-117-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:15:13-37
-118            android:initOrder="100" />
-118-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:16:13-36
-119
-120        <meta-data
-120-->[com.google.android.gms:play-services-basement:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/efd98b46656ca9b1425c42b7775c7140/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-121            android:name="com.google.android.gms.version"
-121-->[com.google.android.gms:play-services-basement:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/efd98b46656ca9b1425c42b7775c7140/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-122            android:value="@integer/google_play_services_version" />
-122-->[com.google.android.gms:play-services-basement:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/efd98b46656ca9b1425c42b7775c7140/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-123    </application>
-124
-125</manifest>
+38        android:testOnly="true"
+39        android:theme="@style/AppTheme" >
+39-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:28:9-40
+40        <activity android:name="com.example.qrmata.Activities.ScanActivity" />
+40-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:29:9-70
+40-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:29:19-58
+41        <activity android:name="com.example.qrmata.Activities.LoginActivity" />
+41-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:30:9-62
+41-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:30:19-59
+42        <activity android:name="com.example.qrmata.Activities.LocationActivity" />
+42-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:31:9-65
+42-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:31:19-62
+43        <activity
+43-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:32:9-41:20
+44            android:name="com.example.qrmata.Splash.Splash"
+44-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:33:13-42
+45            android:screenOrientation="portrait"
+45-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:34:13-49
+46            android:theme="@style/Theme.AppCompat.NoActionBar" >
+46-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:35:13-63
+47            <intent-filter>
+47-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:36:13-40:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:37:17-69
+48-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:37:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:39:17-77
+50-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:39:27-74
+51            </intent-filter>
+52        </activity>
+53
+54        <meta-data
+54-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:47:9-50:21
+55            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+55-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:48:13-70
+56            android:value="ocr, face, barcode, label" >
+56-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:49:13-54
+57        </meta-data>
+58
+59        <provider
+60            android:name="androidx.core.content.FileProvider"
+60-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:53:13-62
+61            android:authorities="com.example.qrmata.provider"
+61-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:54:13-60
+62            android:exported="false"
+62-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:55:13-37
+63            android:grantUriPermissions="true" >
+63-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:56:13-47
+64            <meta-data
+64-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:57:13-59:58
+65                android:name="android.support.FILE_PROVIDER_PATHS"
+65-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:58:17-67
+66                android:resource="@xml/provider_paths" />
+66-->/Users/rmanfig/Desktop/ProyectoSCES/android/app/src/main/AndroidManifest.xml:59:17-55
+67        </provider>
+68
+69        <service
+69-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:9:9-15:19
+70            android:name="com.google.firebase.components.ComponentDiscoveryService"
+70-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:10:13-84
+71            android:exported="false" >
+71-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:11:13-37
+72            <meta-data
+72-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:12:13-14:85
+73                android:name="com.google.firebase.components:com.google.firebase.ml.vision.VisionRegistrar"
+73-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:13:17-108
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.firebase:firebase-ml-vision:23.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0ce792887b6b45afcc3f7e0aa9220c86/firebase-ml-vision-23.0.0/AndroidManifest.xml:14:17-82
+75            <meta-data
+75-->[com.google.firebase:firebase-ml-model-interpreter:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/b8ec46258d4099112ef33dc281ebcc2b/firebase-ml-model-interpreter-21.0.0/AndroidManifest.xml:12:13-14:85
+76                android:name="com.google.firebase.components:com.google.firebase.ml.custom.CustomModelRegistrar"
+76-->[com.google.firebase:firebase-ml-model-interpreter:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/b8ec46258d4099112ef33dc281ebcc2b/firebase-ml-model-interpreter-21.0.0/AndroidManifest.xml:13:17-113
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.firebase:firebase-ml-model-interpreter:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/b8ec46258d4099112ef33dc281ebcc2b/firebase-ml-model-interpreter-21.0.0/AndroidManifest.xml:14:17-82
+78            <meta-data
+78-->[com.google.firebase:firebase-ml-natural-language-smart-reply-model:20.0.6] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/afbc374b1cd3472122b8c5ee9a0dc931/firebase-ml-natural-language-smart-reply-model-20.0.6/AndroidManifest.xml:26:13-28:85
+79                android:name="com.google.firebase.components:com.google.android.gms.predictondevice.component.SmartReplyComponentRegistrar"
+79-->[com.google.firebase:firebase-ml-natural-language-smart-reply-model:20.0.6] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/afbc374b1cd3472122b8c5ee9a0dc931/firebase-ml-natural-language-smart-reply-model-20.0.6/AndroidManifest.xml:27:17-140
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[com.google.firebase:firebase-ml-natural-language-smart-reply-model:20.0.6] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/afbc374b1cd3472122b8c5ee9a0dc931/firebase-ml-natural-language-smart-reply-model-20.0.6/AndroidManifest.xml:28:17-82
+81            <meta-data
+81-->[com.google.firebase:firebase-ml-natural-language:21.0.3] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/8188a5636bfc19f00d4f92957e625d78/firebase-ml-natural-language-21.0.3/AndroidManifest.xml:12:13-14:85
+82                android:name="com.google.firebase.components:com.google.firebase.ml.naturallanguage.NaturalLanguageRegistrar"
+82-->[com.google.firebase:firebase-ml-natural-language:21.0.3] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/8188a5636bfc19f00d4f92957e625d78/firebase-ml-natural-language-21.0.3/AndroidManifest.xml:13:17-126
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[com.google.firebase:firebase-ml-natural-language:21.0.3] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/8188a5636bfc19f00d4f92957e625d78/firebase-ml-natural-language-21.0.3/AndroidManifest.xml:14:17-82
+84            <meta-data
+84-->[com.google.firebase:firebase-ml-natural-language-translate:21.0.2] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/657340322c0024e69fed29f43db310cb/firebase-ml-natural-language-translate-21.0.2/AndroidManifest.xml:12:13-14:85
+85                android:name="com.google.firebase.components:com.google.firebase.ml.naturallanguage.translate.NaturalLanguageTranslateRegistrar"
+85-->[com.google.firebase:firebase-ml-natural-language-translate:21.0.2] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/657340322c0024e69fed29f43db310cb/firebase-ml-natural-language-translate-21.0.2/AndroidManifest.xml:13:17-145
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-ml-natural-language-translate:21.0.2] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/657340322c0024e69fed29f43db310cb/firebase-ml-natural-language-translate-21.0.2/AndroidManifest.xml:14:17-82
+87            <meta-data
+87-->[com.google.firebase:firebase-ml-common:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/dc33680b5fda17d4ceb64956c9e0f7fd/firebase-ml-common-21.0.0/AndroidManifest.xml:11:13-13:85
+88                android:name="com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar"
+88-->[com.google.firebase:firebase-ml-common:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/dc33680b5fda17d4ceb64956c9e0f7fd/firebase-ml-common-21.0.0/AndroidManifest.xml:12:17-117
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-ml-common:21.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/dc33680b5fda17d4ceb64956c9e0f7fd/firebase-ml-common-21.0.0/AndroidManifest.xml:13:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-config:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/52e5dc26c180bce5383c655ff2c8e00b/firebase-config-19.0.0/AndroidManifest.xml:32:13-34:85
+91                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+91-->[com.google.firebase:firebase-config:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/52e5dc26c180bce5383c655ff2c8e00b/firebase-config-19.0.0/AndroidManifest.xml:33:17-117
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-config:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/52e5dc26c180bce5383c655ff2c8e00b/firebase-config-19.0.0/AndroidManifest.xml:34:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:32:13-34:85
+94                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+94-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:33:17-96
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:34:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-abt:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0cc8fd4cdc91b7486de2739c088001e8/firebase-abt-19.0.0/AndroidManifest.xml:13:13-15:85
+97                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+97-->[com.google.firebase:firebase-abt:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0cc8fd4cdc91b7486de2739c088001e8/firebase-abt-19.0.0/AndroidManifest.xml:14:17-109
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-abt:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/0cc8fd4cdc91b7486de2739c088001e8/firebase-abt-19.0.0/AndroidManifest.xml:15:17-82
+99        </service>
+100
+101        <receiver
+101-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:37:9-44:20
+102            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+102-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:38:13-78
+103            android:exported="true"
+103-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:39:13-36
+104            android:permission="com.google.android.c2dm.permission.SEND" >
+104-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:40:13-73
+105            <intent-filter>
+105-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:41:13-43:29
+106                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+106-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:42:17-81
+106-->[com.google.firebase:firebase-iid:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/333a4b14f4a36b22a5b8879ae448e614/firebase-iid-19.0.0/AndroidManifest.xml:42:25-78
+107            </intent-filter>
+108        </receiver>
+109
+110        <activity
+110-->[com.google.android.gms:play-services-base:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/4fd23f1c0a576ef4883220502e5e1d72/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+111            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+111-->[com.google.android.gms:play-services-base:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/4fd23f1c0a576ef4883220502e5e1d72/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+112            android:exported="false"
+112-->[com.google.android.gms:play-services-base:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/4fd23f1c0a576ef4883220502e5e1d72/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+113            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+113-->[com.google.android.gms:play-services-base:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/4fd23f1c0a576ef4883220502e5e1d72/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+114
+115        <provider
+115-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:12:9-16:39
+116            android:name="com.google.firebase.provider.FirebaseInitProvider"
+116-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:13:13-77
+117            android:authorities="com.example.qrmata.firebaseinitprovider"
+117-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:14:13-72
+118            android:exported="false"
+118-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:15:13-37
+119            android:initOrder="100" />
+119-->[com.google.firebase:firebase-common:19.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/f47d93387ab382f8a82b6bd47a96f57b/firebase-common-19.0.0/AndroidManifest.xml:16:13-36
+120
+121        <meta-data
+121-->[com.google.android.gms:play-services-basement:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/efd98b46656ca9b1425c42b7775c7140/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+122            android:name="com.google.android.gms.version"
+122-->[com.google.android.gms:play-services-basement:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/efd98b46656ca9b1425c42b7775c7140/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+123            android:value="@integer/google_play_services_version" />
+123-->[com.google.android.gms:play-services-basement:17.0.0] /Users/rmanfig/.gradle/caches/transforms-2/files-2.1/efd98b46656ca9b1425c42b7775c7140/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+124    </application>
+125
+126</manifest>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.qrmata.Controllers.ContactController;
@@ -29,6 +30,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextInputLayout _txtLayoutUsername,_txtLayoutPassword;
     private MaterialButton _btnLogin;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,28 +49,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String userEmail = _txtLayoutUsername.getEditText().getText().toString();
         String userPassword = _txtLayoutPassword.getEditText().getText().toString();
         Contact contact = new Contact(userEmail,userPassword);
-        GetAPI noteService = ServiceBuilder.buildService(GetAPI.class);
-        Call<Contact> getContactRequest = noteService.getUser(contact);
-
-        getContactRequest.enqueue(new Callback<Contact>() {
-            @Override
-            public void onResponse(Call<Contact> call, Response<Contact> response) {
-                switch (response.code()) {
-                    case 200:
-                        Intent intent = new Intent(getApplicationContext(),ScanActivity.class);
-                        startActivity(intent);
-                        break;
-                    default:
-                        Toast.makeText(getApplicationContext(), "This is my Toast message!",
-                                Toast.LENGTH_LONG).show();
-                        break;
-                }
-            }
-            @Override
-            public void onFailure(Call<Contact> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
+        Intent intent = new Intent(getApplicationContext(),ScanActivity.class);
+        startActivity(intent);
     }
 
     @Override
