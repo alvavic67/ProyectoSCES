@@ -47,7 +47,7 @@ export default function InteractiveList(props) {
               return (
                 <ListItem>
                   <ListItemAvatar>
-                    <Avatar>{/* <FolderIcon /> */}</Avatar>
+                    <Avatar src="https://api.adorable.io/avatars/285/alvaro.png"></Avatar>
                   </ListItemAvatar>
                   <ListItemText
                     primary={user.username}
