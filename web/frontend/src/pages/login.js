@@ -16,11 +16,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 
-import {
-  Route,
-  Link as Navigate,
-  BrowserRouter as Router
-} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import axios from "axios";
 
@@ -49,6 +45,8 @@ const Login = () => {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
 
+  let history = useHistory();
+
   const handleUsername = event => {
     setUsername(event.target.value);
   };
@@ -66,6 +64,8 @@ const Login = () => {
     }).then(async data => {
       const response = await data.json();
       if (response.success) {
+        console.log(response.data);
+        history.push("/home");
       } else {
         console.log("Fail");
       }
@@ -119,7 +119,6 @@ const Login = () => {
               onClick={async () => await signIn()}
             >
               Entrar
-              <Navigate to="/home" />
             </Button>
           </form>
         </div>

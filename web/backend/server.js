@@ -39,7 +39,7 @@ router.get("/getUser", (req, res) => {
   const { username, password } = req.body;
   User.findOne({ username, password }, (err, doc) => {
     if (err) return res.json({ success: false, error: err });
-    return res.json({ success: true, data: doc });
+    return res.json({ success: true, data: doc.username });
   });
 });
 

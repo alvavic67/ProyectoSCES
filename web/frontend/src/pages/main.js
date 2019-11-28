@@ -18,24 +18,24 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "800px",
-    width: "1280px",
+    // height: "800px",
+    // width: "1280px",
     display: "center",
     justifyContent: "center"
   },
   rightDiv: {
     position: "absolute",
-    alignItems: "right",
+    alignItems: "left",
     align: "right",
     margin: theme.spacing(2, 10, 2),
-    paddingLeft: "600px",
-    overflow: "auto"
+    paddingLeft: "700px"
   },
   leftDiv: {
-    alignItems: "left",
+    alignItems: "right",
     paddingLeft: "25px",
     borderRadius: "10px",
     paddingTop: "25px"
@@ -44,6 +44,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Main() {
   const [usuarios, setUsuarios] = useState([]);
+  let history = useHistory();
 
   useEffect(() => {
     fetch("http://localhost:3001/api/getListUsers").then(async data => {
@@ -61,18 +62,47 @@ export default function Main() {
     setOpen(false);
   };
 
+  const logOut = () => {
+    history.push("/");
+  };
+
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <h1 style={{ paddingLeft: "60px" }}>Dashboard</h1>
       <Container maxWidth="lg">
         <Grid container>
-          <Grid item lg={6} sm={6} xs={6} className={classes.leftDiv}>
+          <Grid
+            style={{ paddingTop: "80px" }}
+            item
+            lg={6}
+            sm={6}
+            xs={6}
+            className={classes.leftDiv}
+          >
             <Map className="item-map" />
           </Grid>
-          <Grid item lg={6} sm={6} xs={6} className={classes.rightDiv}>
-            <Button onClick={() => handleClickOpen()}>Generar Reporte</Button>
-            <Button>Cerrar Sesion</Button>
-            <List title="Usuarios" className="item-lista" usuarios={usuarios} />
+          <Grid item className={classes.rightDiv}>
+            <Button
+              color="primary"
+              variant="contained"
+              onClick={() => handleClickOpen()}
+            >
+              Generar Reporte
+            </Button>
+            <Button
+              color="secondary"
+              variant="contained"
+              onClick={() => logOut()}
+            >
+              Cerrar Sesion
+            </Button>
+            <List
+              style={{ backgroundColor: "red" }}
+              title="Usuarios"
+              className="item-lista"
+              usuarios={usuarios}
+            />
           </Grid>
         </Grid>
         <DialogoReporte open={open} close={handleClickCancel} />
