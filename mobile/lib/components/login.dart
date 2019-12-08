@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'qr.dart';
-
-import 'dart:async';
-import 'package:http/http.dart' as http;
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Login extends StatefulWidget {
+  final Firestore firestore;
+  Login({this.firestore});
   @override
   _LoginState createState() => _LoginState();
 }
@@ -12,13 +12,6 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   final _controllerUser = TextEditingController();
   final _controllerPassword = TextEditingController();
-
-  Future<String> authenticate() async {
-    var response = await http.get('http://localhost:3001/api/getListUsers',
-        headers: {'Accept': 'application/json'});
-    print(response.body);
-    return response.body;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,12 +63,29 @@ class _LoginState extends State<Login> {
                 print('Usuario:$user');
                 print('Password:$password');
 
-                // print(await authenticate());
+                var query = widget.firestore
+                    .collection('usuarios')
+                    .where('usuario', isEqualTo: user)
+                    .where('password', isEqualTo: password);
 
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => QR()),
-                );
+                var response = await query
+                    .getDocuments()
+                    .then((snapshot) => snapshot.documents);
+
+                print(response[0].documentID);
+                var docId = response[0].documentID;
+
+                if (response.length != 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QR(
+                        firestore: widget.firestore,
+                        docId: docId,
+                      ),
+                    ),
+                  );
+                }
               },
             )
           ],

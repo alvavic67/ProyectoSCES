@@ -17,7 +17,7 @@ app.use(cors());
 const router = express.Router();
 
 // this is our MongoDB database
-const dbRoute = "mongodb://172.17.217.163:27017/xamapali";
+const dbRoute = "mongodb://192.168.10.70:27017/xamapali";
 
 // connects our back end code with the database
 mongoose.connect(dbRoute, { useNewUrlParser: true });

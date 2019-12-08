@@ -9,7 +9,9 @@ import 'package:geolocator/geolocator.dart';
 
 class Signal extends StatefulWidget {
   final Firestore firestore;
-  Signal({this.firestore});
+  final String docId;
+
+  Signal({this.firestore, this.docId});
   @override
   _SignalState createState() => _SignalState();
 }
@@ -19,6 +21,7 @@ class _SignalState extends State<Signal> {
   String latitude;
   String longitude;
   StreamSubscription<Position> positionStream;
+  Map<String, dynamic> actualUser;
 
   @override
   void initState() {
@@ -44,12 +47,33 @@ class _SignalState extends State<Signal> {
       });
 
       if (latitude != null && longitude != null) {
-        _usuariosRef.document('IUBDedlp0flrHo5OC3jH').updateData({
+        _usuariosRef.document(widget.docId).updateData({
           'coordinates':
               GeoPoint(double.parse(latitude), double.parse(longitude))
         });
       }
     });
+
+    // List<Timestamp> entradasActuales = widget.entradas;
+    // entradasActuales.add(Timestamp.now());
+    // print(entradasActuales);
+    (() async {
+      actualUser = await widget.firestore
+          .collection('usuarios')
+          .document(widget.docId)
+          .get()
+          .then((snapshot) => snapshot.data);
+
+      var _entradas =
+          new List<Timestamp>.from(actualUser['_entrada'].cast<Timestamp>());
+      _entradas.add(Timestamp.now());
+
+      print(_entradas);
+      await widget.firestore
+          .collection('usuarios')
+          .document(widget.docId)
+          .updateData({'_entrada': _entradas});
+    })();
   }
 
   @override
@@ -77,8 +101,19 @@ class _SignalState extends State<Signal> {
               ),
               color: Colors.redAccent,
               // Within the `FirstRoute` widget
-              onPressed: () {
+              onPressed: () async {
                 positionStream.pause();
+
+                var _salidas = new List<Timestamp>.from(
+                    actualUser['_salida'].cast<Timestamp>());
+                _salidas.add(Timestamp.now());
+
+                print(_salidas);
+                await widget.firestore
+                    .collection('usuarios')
+                    .document(widget.docId)
+                    .updateData({'_salida': _salidas});
+
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => QR()),
