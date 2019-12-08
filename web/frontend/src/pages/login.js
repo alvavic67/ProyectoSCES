@@ -20,6 +20,10 @@ import { useHistory } from "react-router-dom";
 
 import axios from "axios";
 
+import * as config from "../config";
+import "firebase/firestore";
+const db = config.app.firestore();
+
 const useStyles = makeStyles(theme => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -58,18 +62,32 @@ const Login = () => {
   const signIn = async () => {
     console.log(username);
     console.log(password);
-    await fetch("http://localhost:3001/api/getUser", {
-      username: username,
-      password: password
-    }).then(async data => {
-      const response = await data.json();
-      if (response.success) {
-        console.log(response.data);
-        history.push("/home");
-      } else {
-        console.log("Fail");
-      }
-    });
+
+    const response = await db
+      .collection("usuarios")
+      .where("usuario", "==", username)
+      .where("password", "==", password)
+      .get()
+      .then(snapshot => snapshot.docs);
+
+    if (response.length != 0) {
+      history.push("/home");
+    } else {
+      alert("Usuario y/o password incorrectos");
+    }
+
+    // await fetch("http://localhost:3001/api/getUser", {
+    //   username: username,
+    //   password: password
+    // }).then(async data => {
+    //   const response = await data.json();
+    //   if (response.success) {
+    //     console.log(response.data);
+    //     history.push("/home");
+    //   } else {
+    //     console.log("Fail");
+    //   }
+    // });
   };
 
   return (

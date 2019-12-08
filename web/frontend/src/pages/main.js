@@ -20,6 +20,10 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
+import * as config from "../config";
+import "firebase/firestore";
+const db = config.app.firestore();
+
 const useStyles = makeStyles(theme => ({
   root: {
     // height: "800px",
@@ -46,11 +50,18 @@ export default function Main() {
   const [usuarios, setUsuarios] = useState([]);
   let history = useHistory();
 
-  useEffect(() => {
-    fetch("http://localhost:3001/api/getListUsers").then(async data => {
-      const users = await data.json();
-      setUsuarios(users.data);
-    });
+  useEffect(async () => {
+    // fetch("http://localhost:3001/api/getListUsers").then(async data => {
+    //   const users = await data.json();
+    //   setUsuarios(users.data);
+    // });
+
+    var response = await db
+      .collection("usuarios")
+      .get()
+      .then(snapshot => snapshot.docs.map(doc => doc.data().usuario));
+    console.log(response);
+    setUsuarios(response);
   }, []);
 
   const [open, setOpen] = React.useState(false);
