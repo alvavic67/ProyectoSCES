@@ -72,7 +72,7 @@ class _SignalState extends State<Signal> {
       await widget.firestore
           .collection('usuarios')
           .document(widget.docId)
-          .updateData({'_entrada': _entradas});
+          .updateData({'_entrada': _entradas, 'activo': true});
     })();
   }
 
@@ -112,7 +112,7 @@ class _SignalState extends State<Signal> {
                 await widget.firestore
                     .collection('usuarios')
                     .document(widget.docId)
-                    .updateData({'_salida': _salidas});
+                    .updateData({'_salida': _salidas, 'activo': false});
 
                 Navigator.push(
                   context,

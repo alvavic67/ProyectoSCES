@@ -50,8 +50,8 @@ export default function InteractiveList(props) {
                     <Avatar src="https://api.adorable.io/avatars/285/alvaro.png"></Avatar>
                   </ListItemAvatar>
                   <ListItemText
-                    primary={user.username}
-                    secondary={secondary ? "Secondary text" : null}
+                    primary={user.usuario}
+                    secondary={user.activo ? "Usuario activo" : null}
                   />
                 </ListItem>
               );

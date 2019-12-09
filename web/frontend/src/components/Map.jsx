@@ -13,10 +13,6 @@ class MapContainer extends Component {
   };
 
   componentDidMount() {
-    // fetch("http://localhost:3001/api/getLocations").then(async data => {
-    //   const users = await data.json();
-    //   this.setState({ locations: users.data });
-    // });
     db.collection("usuarios").onSnapshot(snapshot => {
       var response = snapshot.docs.map(doc => doc.data().coordinates);
       response = response.filter(item => item != undefined);

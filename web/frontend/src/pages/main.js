@@ -59,9 +59,19 @@ export default function Main() {
     var response = await db
       .collection("usuarios")
       .get()
-      .then(snapshot => snapshot.docs.map(doc => doc.data().usuario));
+      .then(snapshot => snapshot.docs.map(doc => doc.data()));
     console.log(response);
-    setUsuarios(response);
+
+    var _usuarios = [];
+    response.forEach(res => {
+      var { usuario, activo } = res;
+      _usuarios.push({
+        usuario,
+        activo
+      });
+    });
+    setUsuarios(_usuarios);
+    console.log(_usuarios);
   }, []);
 
   const [open, setOpen] = React.useState(false);

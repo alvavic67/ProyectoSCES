@@ -10,6 +10,10 @@ import axios from "axios";
 
 import jsPDF from "jspdf";
 
+import * as config from "../config";
+import "firebase/firestore";
+const db = config.app.firestore();
+
 export default function DialogProfessor(props) {
   const [role, setRole] = React.useState("");
   const handleRole = event => {
@@ -19,12 +23,21 @@ export default function DialogProfessor(props) {
   const reportes = ["Reporte 1", "Reporte 2", "Reporte 3", "Ultimo reporte"];
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:3001/api/getReports").then(async data => {
-      const reports = await data.json();
-      console.log(reports.data);
-      setUsers(reports.data);
-    });
+  useEffect(async () => {
+    // fetch("http://localhost:3001/api/getReports").then(async data => {
+    //   const reports = await data.json();
+    //   console.log(reports.data);
+    //   setUsers(reports.data);
+    // });
+
+    var response = await db
+      .collection("usuarios")
+      .get()
+      .then(snapshot => snapshot.docs.map(doc => doc.data()));
+
+    console.log(response);
+
+    setUsers(response);
   }, []);
 
   const downloadPDF = () => {
@@ -33,7 +46,7 @@ export default function DialogProfessor(props) {
     let contenido = "";
     doc.text("Reportes", 20, 20);
     users.forEach(user => {
-      contenido += `Nombre: ${user.name}\nHoras:${user.hours}\nDia:${user.day}\nFecha:${user.date}\n\n`;
+      contenido += `Nombre: ${user.usuario}\nEntradas:${user._entrada}\nSalidas:${user._salida}\n\n`;
     });
     doc.text(contenido, 15, 30);
     doc.save("reporte.pdf");
